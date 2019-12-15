@@ -1,0 +1,27 @@
+{
+	"name"			: "Sistem Informasi Akademik",
+	"version"		: "1.0.0",
+	"depends"		: [ 
+						"base",
+						"board",
+						],
+	"author"		: "Iqbal A",
+	"category"		: "Education",
+	"website"		: "http://www.vitraining.com",
+	"description"	: "Sistem Informasi Akademik",
+	"data"			: [
+					"menu.xml",
+					"security/ir.model.access.csv",
+					"course.xml",
+					"session.xml",
+					"attendee.xml",
+					"partner.xml",
+					"security/group.xml",
+					"wizard/create_attendee.xml",
+					"report/session.xml",
+					"dashboard.xml",
+					],
+	"installable"	: True,
+	"auto_install"	: False,
+	"application"	: True,
+	}

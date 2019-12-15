@@ -1,0 +1,89 @@
+<odoo>
+	<data>
+
+		<!-- Action Course -->
+		<record id="action_course_list" model="ir.actions.act_window">
+			<field name="name">Daftar Course</field>
+			<field name="res_model">academic.course</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create"> Click to add a Course
+				</p>
+				<p>Klik tombol create untuk bikin Course baru</p>
+			</field>
+		</record>
+
+		<!-- Action Session -->
+		<record id="action_session_list" model="ir.actions.act_window">
+			<field name="name">Daftar Session</field>
+			<field name="res_model">academic.session</field>
+			<field name="view_mode">tree,form,calendar,graph,kanban</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create"> Click to add a Session
+				</p>
+				<p>Klik tombol create untuk bikin Session baru</p>
+			</field>
+		</record>
+
+		<!-- Action Attendee -->
+		<record id="action_attendee_list" model="ir.actions.act_window">
+			<field name="name">Daftar Attende</field>
+			<field name="res_model">academic.attendee</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create"> Click to add a Attendee
+				</p>
+				<p>Klik tombol create untuk bikin Attende baru</p>
+			</field>
+		</record>
+
+		<!-- Action Instructor -->
+		<record id="action_instructor_list" model="ir.actions.act_window">
+			<field name="name">Instructor</field>
+			<field name="res_model">res.partner</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">kanban,tree,form</field>
+			<field name="context">{"search_default_instructor":1}</field>
+			<field name="search_view_id" ref="base.view_res_partner_filter" />
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create"> Click to add an Instructor
+				</p>
+				<p>Tambah Instructor Baru</p>
+			</field>
+		</record>
+
+		<menuitem id="academic_0"
+			name="Academic"
+			sequence="20"/>
+
+		<menuitem id="academic_1"
+			name="Academic"
+			parent="academic_0"
+			sequence="20"/>
+
+		<menuitem id="menu_academic_course"
+			name="Course"
+			parent="academic_1"
+			action="action_course_list"
+			sequence="20" />
+
+		<menuitem id="menu_academic_session"
+			name="Session"
+			parent="academic_1"
+			action="action_session_list"
+			sequence="30" />
+
+		<menuitem id="menu_academic_attendee"
+			name="Attendee"
+			parent="academic_1"
+			action="action_attendee_list"
+			sequence="40" />
+
+		<menuitem id="menu_academic_instructor"
+			name="Instructor"
+			parent="academic_1"
+			action="action_instructor_list"
+			sequence="50" />
+				
+	</data>
+</odoo>
